@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge Mobiles - Wallet Application</title>
+    <style>
+        body {
+            color:black;
+            background-color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        select, input[type="text"] {
+            width: 30%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4caf50;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Wallet Application</h1>
+        <label for="Operator">Select Operator</label>
+        <select id="Operator" name="Operator">
+            <option value="Tata Play">Tata Play</option>
+            <option value="Airtel DTH">Airtel DTH</option>
+            <option value="SunDirect">SunDirect</option>
+        </select>
+        <br><br>
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="text" id="mobileNumber" name="mobileNumber">
+        <br><br>
+        <label for="amount">Amount</label>
+        <input type="text" id="amount" name="amount">
+        <br><br>
+        <a href="payc.html"><button type="button">Pay Options</button></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="payment.html"><button type="button">Cancel</button></a>
+    </center>
+</body>
+
+</html>

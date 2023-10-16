@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Via QR Scanner - Wallet Application</title>
+    <style>
+        body {
+            color:black;
+            background-color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4caf50;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Pay Via QR Scanner</h1>
+        <video id="camera-feed" autoplay></video>
+        <br><br>
+        <button type="button" id="scan-button">Scan QR Code</button>
+        <br><br>
+        <a href="pay.html">Cancel</a>
+    </center>
+
+    <script>
+        const cameraFeed = document.getElementById('camera-feed');
+        const scanButton = document.getElementById('scan-button');
+
+        // Access the device camera
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                cameraFeed.srcObject = stream;
+            })
+            .catch(function (error) {
+                console.error('Error accessing the camera: ', error);
+            });
+
+        // Handle QR code scanning
+        scanButton.addEventListener('click', function () {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+
+            // Draw the video frame on the canvas
+            context.drawImage(cameraFeed, 0, 0, canvas.width, canvas.height);
+
+            // Get the QR code data from the canvas
+            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+            // Process imageData to decode QR code using a QR code reader library
+
+            // For now, let's just log the captured QR code data
+            console.log('Scanned QR Code Data:', 'SampleQRCodeData');
+        });
+    </script>
+</body>
+
+</html>
+

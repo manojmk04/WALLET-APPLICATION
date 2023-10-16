@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Wallet Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .login-container {
+        /* background-color: white; */
+        padding: 0px;
+        border-radius: 0px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px; /* Set a fixed width for the container */
+        margin-left: 100px; /* Adjust margin-left to move the div to the right */
+    }
+
+        .links a {
+            text-decoration: none;
+            color: #4caf50;
+            font-weight: bold;
+        }
+    </style>
+    <head>
+        <!-- ... your other head elements ... -->
+        <script>
+            function validateLogin() {
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+    
+                // Perform your login validation logic here
+                // For example, you can check if the email and password are correct
+                // If valid, you can redirect the user to the dashboard page
+                // If invalid, you can display an error message to the user
+            }
+        </script>
+    </head>
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>E-Wallet Login</h1>
+        <img src="front page.jpeg" alt="Wallet Icon">
+        
+        <form>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+        </form>
+        <div class="login-container">
+            <a href="login.html">
+            <button type="submit">Login</button></a>
+            </div>
+        <div class="links" text-align="center">
+            <a href="password.html">Forgot password?</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+</body>
+
+</html>

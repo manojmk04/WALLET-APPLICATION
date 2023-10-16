@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Application</title>
+    <style>
+        body {
+            color:black;
+            background-color:white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        form {
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Wallet Application</h1>
+    </center>
+    <form>
+        <label for="billType">Bill Type</label>
+        <select id="billType" name="billType">
+            <option value="Telephone Bill">Telephone Bill</option>
+            <option value="Electricity Bill">Electricity Bill</option>
+        </select>
+        <br><br>
+        <label for="serviceNumber">Service Number</label>
+        <input type="text" id="serviceNumber" name="serviceNumber">
+        <br><br>
+        <label for="amount">Amount</label>
+        <input type="text" id="amount" name="amount">
+        <br><br><br>
+        <a href="payc.html"><button type="button">Pay Options</button></a>
+        <br><br>
+        <a href="login.html"><button type="button">Cancel</button></a>
+    </form>
+</body>
+
+</html>
